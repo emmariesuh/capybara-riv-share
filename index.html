@@ -9,17 +9,15 @@
 </style>
 </head>
 <body>
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="600" height="600"></canvas>
 <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
 <script>
   new rive.Rive({
     src: "capybara_orange.riv",
     canvas: document.getElementById("canvas"),
     autoplay: true,
-    stateMachines: undefined,
-    onLoad: (r) => {
-      r.resizeDrawingSurfaceToCanvas();
-    },
+    fit: rive.Fit.contain,
+    onLoad: () => {},
   });
 </script>
 </body>
