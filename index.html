@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Capybara Rive Animation</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #f4ede4; display: flex; align-items: center; justify-content: center; }
+  canvas { width: 90vmin; height: 90vmin; max-width: 600px; max-height: 600px; }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+<script>
+  new rive.Rive({
+    src: "capybara_orange.riv",
+    canvas: document.getElementById("canvas"),
+    autoplay: true,
+    stateMachines: undefined,
+    onLoad: (r) => {
+      r.resizeDrawingSurfaceToCanvas();
+    },
+  });
+</script>
+</body>
+</html>
